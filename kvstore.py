@@ -1,4 +1,12 @@
+"""
+Jake Gonzales
 
+Assisted by Claude Sonnet 4.6
+
+A persistent key-value store that accepts SET/GET/EXIT commands over stdin and
+persists all writes to an append-only log file (data.db).
+
+"""
 import os
 import sys
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 test_kvstore.py - Unit tests for the key-value store.
 
