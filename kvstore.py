@@ -85,7 +85,10 @@ def main():
     idx = LinkedListIndex()
     load_from_log(idx)
     print("kvstore ready. Commands: SET <key> <value>, GET <key>, EXIT", flush=True)
-    for line in sys.stdin:
+    while True:
+        line = sys.stdin.readline()
+        if not line:
+            break
         line = line.rstrip("\n")
         result = parse_and_dispatch(line, idx)
         if result is None:
