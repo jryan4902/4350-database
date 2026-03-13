@@ -87,7 +87,6 @@ def parse_and_dispatch(command_str, idx):
 def main():
     idx = LinkedListIndex()
     load_from_log(idx)
-    # Graders and harnesses expect this exact startup signal.
     print("ready", flush=True)
     while True:
         line = sys.stdin.readline()
