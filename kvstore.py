@@ -77,7 +77,7 @@ def parse_and_dispatch(command_str, idx):
             return "ERROR: GET requires a key"
         key = parts[1]
         value = idx.get(key)
-        return value if value is not None else "NULL"
+        return value if value is not None else ""
     elif cmd == "EXIT":
         return None
     else:

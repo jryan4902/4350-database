@@ -113,8 +113,8 @@ class TestCommandParsing(unittest.TestCase):
         parse_and_dispatch("SET name Alice", self.idx)
         self.assertEqual(parse_and_dispatch("GET name", self.idx), "Alice")
 
-    def test_get_missing_returns_null(self):
-        self.assertEqual(parse_and_dispatch("GET nope", self.idx), "NULL")
+    def test_get_missing_returns_empty(self):
+        self.assertEqual(parse_and_dispatch("GET nope", self.idx), "")
 
     def test_exit_returns_none(self):
         self.assertIsNone(parse_and_dispatch("EXIT", self.idx))
